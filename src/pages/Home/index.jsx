@@ -8,15 +8,22 @@ import { CountryContext } from '../../context/CountryContext'
 import SearchComponent from '../../component/search-filter/Search-component'
 
 export const Home = () => {
+  const { mappedCountries } = useContext(CountryContext)
 
   return (
     <div>
       <Layout>
         <Container>
           <div className={`${styles.home} bg text`}>
-            <SearchComponent/>
+            {/* <SearchComponent/> */}
             <div className={styles.contain}>
-              <CountryCard/>
+              {
+                  mappedCountries && mappedCountries.map((country, idx) => {
+                      return (
+                          <CountryCard key={idx} country={country} />
+                      )
+                  })
+              }
             </div>
           </div>    
         </Container>
