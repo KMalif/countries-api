@@ -13,7 +13,8 @@ export const CountryProvider = ({children}) => {
         const getCountries = async () => {
             try{
                 const data = await axios.get('https://restcountries.com/v3.1/all')
-                setCountries(data.json())
+                setCountries()
+
             }catch(error){
                 console.log(error)
             }

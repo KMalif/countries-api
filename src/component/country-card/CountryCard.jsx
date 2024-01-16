@@ -5,7 +5,6 @@ import styles from './CountryCard.module.scss'
 
 export const CountryCard = ({country}) => {
 
-
   return (
     <div className={`${styles.country_card}`}>
         <img src="https://flagcdn.com/w320/mw.png" alt="coutry_flag" className={styles.country_flag} />

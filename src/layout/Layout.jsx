@@ -9,7 +9,7 @@ import { Navigation } from './navigation/Navigation'
 
 export const Layout = ({children}) => {
 
-    const {theme} = useContext(ThemeContext)
+const {theme} = useContext(ThemeContext)
 
   return (
     <div className={`${styles.main} bg`}>
