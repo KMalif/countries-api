@@ -1,7 +1,10 @@
-import { Route, Routes } from "react-router-dom";
-import { Home } from "./pages/Home";
 import { useContext } from "react";
+import { Route, Routes } from "react-router-dom";
+
+import { Home } from "./pages/Home";
 import { ThemeContext } from "./context/ThemeContext";
+import { CountryComponent } from "./component/country-component/CountryComponent";
+
 
 
 function App() {
@@ -11,6 +14,7 @@ function App() {
    <div className={theme}>
       <Routes>
         <Route index element={<Home/>}/>
+        <Route path=":country" element={<CountryComponent />} />
       </Routes>
    </div>
   )
